@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Based DPR Evaluation System | MDoNER India</title>
+    <meta name="description" content="Revolutionizing Detailed Project Report evaluation with AI and NLP for the Ministry of Development of North Eastern Region. Faster, smarter regional development." />
+    <meta name="author" content="Ministry of Development of North Eastern Region" />
+    <meta name="keywords" content="DPR, AI, NLP, Government, MDoNER, North-East India, Project Evaluation, Machine Learning" />
+
+    <meta property="og:title" content="AI-Based DPR Evaluation System | MDoNER India" />
+    <meta property="og:description" content="Automating DPR reviews for faster, smarter regional development using advanced NLP and machine learning." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI-Based DPR Evaluation System | MDoNER India" />
+    <meta name="twitter:description" content="Revolutionizing project evaluation with AI-powered analytics and insights." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0066FF" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="DPR Analyzer" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('SW registered:', registration);
+            })
+            .catch(error => {
+              console.log('SW registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
